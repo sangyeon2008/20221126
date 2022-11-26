@@ -1,0 +1,16 @@
+def solution(babbling):
+    cnt = 0
+    can = ["aya", "ye", "woo", "ma"]
+    for i in range(len(babbling)):
+        if can[i] in babbling:
+            cnt +=1
+        for j in range(i+1,len(babbling)):
+            if can[i] + can[j] in babbling:
+                cnt +=1
+
+    return cnt
+
+
+
+b=["ayaye", "uuuma", "ye", "yemawoo", "ayaa"]
+print(solution(b))
